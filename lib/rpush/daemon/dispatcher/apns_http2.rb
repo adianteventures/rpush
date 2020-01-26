@@ -12,7 +12,7 @@ module Rpush
         }
 
         DEFAULT_CONNECT_TIMEOUT = 60
-        DEFAULT_IDLE_TIMEOUT = 60
+        DEFAULT_IDLE_TIMEOUT = 300
 
         def initialize(app, delivery_class, _options = {})
           @app = app
