@@ -23,7 +23,6 @@ module Rpush
           # Send all preprocessed requests at once
           @client.join(timeout: CLIENT_JOIN_TIMEOUT)
         rescue NetHttp2::TimeoutError => error
-          log_error(error)
           mark_batch_failed(error)
           @client.close
           raise
